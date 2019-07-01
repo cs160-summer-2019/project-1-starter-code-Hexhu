@@ -25,7 +25,7 @@ SECRET_KEY = 'dh)m$rf)%qu#%pvyo=7b8gipl6p$i%v6l=_-mxoja$ylc!4rny'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["cs160-su19-proj1-hexhuang321075.codeanyapp.com"]
+ALLOWED_HOSTS = ["cs160-su19-proj1-hexhuang321075.codeanyapp.com", "0.0.0.0"]
 
 
 # Application definition
