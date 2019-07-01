@@ -4,12 +4,157 @@
 <html>
 <head>
 	<title>Comparison</title>
-	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+	<!-- 
+		Font Awesome deployed in this project is released under CC BY 4.0 License
+		and MIT License. See github.com/FortAwesome/Font-Awesome. 
+	-->
+	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/fontawesome-free-5.9.0-web/css/all.min.css' %}" />
+	<!-- MDB Free is released under MIT License, see github.com/mdbootstrap/bootstrap-material-design-->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/MDB-Free_4.8.3/css/style.css' %}" /> -->
 </head>
+
 <body>
-	<!-- your comparison interface here -->
+	<div class="fixed-top" style="height: 100px">
+		<button class="button-upper-left" onclick="window.location.href='/weather/settings/'"><i class="fas fa-3x fa-bars"></i></button>
+
+		<input style="width: 80%; height: 100%;" placeholder="Type city name here"> </input>
+
+		<!-- 
+		The fully interactive prototype submits the form for real.
+		<button type="button" class="btn btn-primary"> </button> 
+		For now let's just keep it simple: an icon with a link.
+		-->
+		<button class="button-upper-right" onclick="window.location.href='/weather/forecast/'"><i class="fas fa-3x fa-search"></i></button>
+	</div>
+
+	<!-- TOOD: get weather info from openweathermap.org/forecast5 -->
+	<div class="container-fluid" style="margin-top: 100px">
+
+		<div class="card weather-card bg-success">
+  			<div class="card-body">
+				  <!-- TODO: change this width into 160px so it fits large screens. -->
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					13:00
+					<br />
+					19:30
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-cloud-sun"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> San Jose </p>
+					<p style="font-size: 2.2em">Average Temp: 26°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+
+		<div class="card date-division-bar">
+			<p> Aug 22 </p>
+		</div>
+
+		<div class="card weather-card bg-success">
+  			<div class="card-body">
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					09:00
+					<br />
+					13:00
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-sun"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> Berkeley </p>
+					<p style="font-size: 2.2em">Average Temp: 27°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+
+		
+		<div class="card weather-card bg-warning">
+			<div class="card-body">
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					09:00
+					<br />
+					13:00
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-sun"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> Palo Alto </p>
+					<p style="font-size: 2.2em">Average Temp: 37°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/alert/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+
+		<div class="card weather-card bg-success">
+			<div class="card-body">
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					13:00
+					<br />
+					20:00
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-sun"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> Sunnyvale </p>
+					<p style="font-size: 2.2em">Average Temp: 20°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+
+		<div class="card date-division-bar bg-info">
+			<p> Aug 23 </p>
+		</div>
+
+		<div class="card weather-card bg-primary">
+			<div class="card-body">
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					09:00
+					<br />
+					12:00
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-cloud-showers-heavy"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> Palo Alto </p>
+					<p style="font-size: 2.2em">Average Temp: 13°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/alert/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+
+		<div class="card weather-card bg-success">
+			<div class="card-body">
+				<div style="width: 20%; float: left; font-size: 3em; margin: 0px">
+					13:00
+					<br />
+					16:30
+				</div>
+				<div style="width: 27%; float: left;">
+					<i class="fas fa-8x fa-sun"></i>
+				</div>
+				<div style="width: auto; float: left">
+					<p style="font-size: 3em"> San Francisco </p>
+					<p style="font-size: 2.2em">Average Temp: 20°</p>
+				</div>
+
+				<span class="weather-card-details-arrow" onclick="window.location.href='/weather/forecast/'"><i class="fas fa-5x fa-chevron-right"></i></span>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
